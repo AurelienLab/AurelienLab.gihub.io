@@ -15,6 +15,7 @@ $colors-map: ();
   $map: (
     base: $color,
     light: lighten($color, 5%),
+    lighter: lighten($color, 30%),
     dark: darken($color, 35%),
   );
   @return $map;
