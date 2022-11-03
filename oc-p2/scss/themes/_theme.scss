@@ -1,5 +1,10 @@
 body {
-  margin: 12px;
+  //margin: 12px;
   background: #f7f7f7;
   font-family: $text-font;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
 }
