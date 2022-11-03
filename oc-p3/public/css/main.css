@@ -160,7 +160,6 @@
 .card-restaurant__btn i:hover::before {
   opacity: 0;
 }
-
 .instructions {
   display: flex;
   flex-direction: column;
