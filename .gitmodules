@@ -1,0 +1,3 @@
+[submodule "oc-projet2"]
+	path = oc-projet2
+	url = git@github.com:AurelienLab/oc-projet2.git
