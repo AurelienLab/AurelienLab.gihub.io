@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.link-expanded::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.card {
+  position: relative;
+  margin: 0 auto;
+  background: #9899b5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+}
+.card__heading {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.card__subheading {
+  font-size: 1rem;
+}
+.card__informations {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.card-project::after {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  border-radius: 50%;
+  content: counter(proj);
+  counter-increment: proj;
+  font-size: 1.5rem;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 4px;
+  border: 4px solid #FFFFFF;
+}
+.card-project .badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.card-project__illustration {
+  height: 170px;
+  width: 100%;
+  overflow: hidden;
+  background: #FDFDFD;
+}
+.card-project__illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+.card-project--primary {
+  background: #4d42fe;
+}
+.card-project--primary::after {
+  color: #1d0ffe;
+  background: #655bfe;
+}
+.card-project--secondary {
+  background: #9cf8cd;
+}
+.card-project--secondary::after {
+  color: #6cf5b5;
+  background: #b4fad9;
+}
+.card-project--tertiary {
+  background: #DC965A;
+}
+.card-project--tertiary::after {
+  color: #d37b30;
+  background: #e0a36f;
+}
+.card-project--success {
+  background: #00ad56;
+}
+.card-project--success::after {
+  color: #007a3d;
+  background: #00c763;
+}
+.card-project--warning {
+  background: #cec300;
+}
+.card-project--warning::after {
+  color: #9b9300;
+  background: #e8db00;
+}
+.card-project--dark {
+  background: #242325;
+}
+.card-project--dark::after {
+  color: #0b0a0b;
+  background: #312f32;
+}
+.card-project--disabled {
+  background: #716d74;
+}
+.card-project--disabled::after {
+  background: #716d74;
+}
+.card-project--disabled .card-project__illustration img {
+  filter: grayscale(1);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+.badge--primary {
+  color: #1d0ffe;
+  background: #dcdaff;
+}
+.badge--secondary {
+  color: #6cf5b5;
+  background: white;
+}
+.badge--tertiary {
+  color: #d37b30;
+  background: #f7e6d8;
+}
+.badge--success {
+  color: #007a3d;
+  background: #47ffa2;
+}
+.badge--warning {
+  color: #9b9300;
+  background: #fff768;
+}
+.badge--dark {
+  color: #0b0a0b;
+  background: #716d74;
+}
+.badge--icon {
+  text-align: center;
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.header {
+  font-weight: 200;
+  background: #a7a8bf;
+  padding: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+.header img {
+  border-radius: 50%;
+  width: 160px;
+}
+.header__heading {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: center;
+    gap: 40px;
+  }
+  .header img {
+    width: 100px;
+  }
+  .header__heading {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header__heading {
+    font-size: 3rem;
+  }
+}
+
+body {
+  color: #f1f1f1;
+  font-family: "Quicksand", sans-serif;
+  background: #3b3b3b;
+}
+
+a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+section {
+  padding: 35px;
+  background: #6c6d94;
+}
+
+.section__heading {
+  margin-bottom: 35px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  counter-reset: proj;
+}
+.projects .section__heading {
+  width: 100%;
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
