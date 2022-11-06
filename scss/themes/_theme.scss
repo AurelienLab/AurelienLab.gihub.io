@@ -1,0 +1,19 @@
+body {
+  color: $text-color;
+  font-family: 'Quicksand', sans-serif;
+  background: #3b3b3b;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+section {
+  padding:35px;
+  background: $bg-secondary;
+}
+
+.section__heading {
+  margin-bottom: 35px;
+}

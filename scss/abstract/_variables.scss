@@ -1,0 +1,19 @@
+$bg-primary: #565777;
+$bg-secondary: lighten($bg-primary, 10%);
+$bg-tertiary: lighten($bg-primary, 25%);
+$text-color: #f1f1f1;
+
+$breakpoints : (
+        mobile: 425px,
+        tablet: 768px,
+);
+
+
+$colors: (
+        primary: #4d42fe,
+        secondary: #9cf8cd,
+        tertiary: #DC965A,
+        success: #00ad56,
+        warning: #cec300,
+        dark: #242325
+);

@@ -1,0 +1,11 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  .section__heading {
+    width: 100%;
+    flex-grow: 1;
+  }
+  counter-reset: proj;
+
+}

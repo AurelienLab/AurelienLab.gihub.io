@@ -1,0 +1,106 @@
+.card {
+  position: relative;
+  margin: 0 auto;
+  background: $bg-tertiary;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+
+  &__heading {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  &__subheading {
+    font-size: 1rem;
+  }
+
+  &__informations {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  &-project {
+    //@include animate-appear;
+    //@include tablet-only {
+    //  width: 48%;
+    //}
+
+    &::after { //Aspect de la numérotation
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      border-radius: 50%;
+      content: counter(proj);
+      counter-increment: proj;
+      font-size: 1.5rem;
+      line-height: 35px;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      padding: 4px;
+
+      border: 4px solid #FFFFFF;
+    }
+
+    .badge {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+    &__illustration {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+      }
+      height: 170px;
+      width: 100%;
+      overflow: hidden;
+      background: #FDFDFD;
+    }
+
+    @each $key, $value in $colors-map {
+      &--#{$key} {
+        a {
+          color:      map-get($value, ligther);
+        }
+        background: map-get($value, base);
+
+        &::after {
+          color: map-get($value, dark);
+          background: map-get($value, light);
+        }
+      }
+    }
+
+    &--disabled {
+      a {
+        color:      map-get($colors-map, dark, ligther);
+      }
+      background: map-get($colors-map, dark, lighter);
+
+      &::after {
+        color: map-get($colors-map, dark, ligther);
+        background: map-get($colors-map, dark, lighter);
+      }
+
+      .card-project__illustration {
+        img {
+          filter: grayscale(1)
+        }
+      }
+    }
+  }
+}

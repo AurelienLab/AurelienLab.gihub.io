@@ -1,0 +1,40 @@
+.header {
+  font-weight: 200;
+  background: lighten($bg-secondary, 20%);
+  padding: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  img {
+    border-radius: 50%;
+    width: 160px;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  @include tablet-only {
+    justify-content: center;
+    gap: 40px;
+
+    img {
+      width: 100px;
+    }
+
+    &__heading {
+      font-size: 2rem;
+      line-height: 4rem;
+    }
+  }
+
+  @include mobile-only {
+    flex-direction: column;
+    gap: 20px;
+    &__heading {
+      font-size: 3rem;
+    }
+  }
+}
