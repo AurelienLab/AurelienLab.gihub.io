@@ -8,4 +8,11 @@
   }
   counter-set: proj 1;
 
+  @include tablet-only {
+    gap: 50px;
+
+    .section__heading {
+      margin: 0;
+    }
+  }
 }

@@ -244,5 +244,13 @@ section {
   width: 100%;
   flex-grow: 1;
 }
+@media screen and (max-width: 768px) {
+  .projects {
+    gap: 50px;
+  }
+  .projects .section__heading {
+    margin: 0;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
