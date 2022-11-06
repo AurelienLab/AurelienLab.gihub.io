@@ -238,7 +238,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  counter-reset: proj;
+  counter-set: proj 1;
 }
 .projects .section__heading {
   width: 100%;
